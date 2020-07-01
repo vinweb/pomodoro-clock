@@ -7,7 +7,7 @@
 
 html,
 body {
-  height: 100%;
+  height: 100vh;
 }
 
 .bg-red {
@@ -15,11 +15,19 @@ body {
 }
 
 .session {
-  width: 340px;
-  height: 340px;
+  width: 330px;
+  height: 330px;
 }
 
 .action {
   cursor: pointer;
   user-select: none;
+}
+
+.display-4 {
+  font-size: 2.5rem;
+}
+
+.lead {
+  font-size: 1.5rem;
 }

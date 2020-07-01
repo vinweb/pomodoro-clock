@@ -116,9 +116,9 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="container h-100">
+      <div className="container h-100 bg-dark">
         <div className="row h-100 align-items-center">
-          <div className="col text-center bg-dark">
+          <div className="col text-center">
             <div className="row">
               <div className="col">
                 <h1 className="display-4">Pomodoro Clock</h1>
@@ -128,28 +128,30 @@ class App extends React.Component {
               <div className="col">
                 <div className="session border border-white rounded-circle p-5 m-auto">
                   <h2 id="timer-label">{this.state.label}</h2>
-                  <div id="time-left" className="display-4 my-5">
+                  <div id="time-left" className="display-3 my-4">
                     {this.convertSeconds(this.state.count)}
                   </div>
                   <audio
                     id="beep"
                     src="http://static1.grsites.com/archive/sounds/musical/musical012.mp3"
                   ></audio>
-                  <span
-                    id="start_stop"
-                    className="text-light action"
-                    onClick={this.start}
-                  >
-                    <i className="fas fa-play"></i>
-                    <i className="fas fa-pause"></i>
-                  </span>
-                  <span
-                    id="reset"
-                    className="text-light ml-2 action"
-                    onClick={this.reset}
-                  >
-                    <i className="fas fa-undo-alt"></i>
-                  </span>
+                  <div className="mt-5">
+                    <span
+                      id="start_stop"
+                      className="text-light action"
+                      onClick={this.start}
+                    >
+                      <i className="fas fa-play"></i>
+                      <i className="fas fa-pause"></i>
+                    </span>
+                    <span
+                      id="reset"
+                      className="text-light ml-3 action"
+                      onClick={this.reset}
+                    >
+                      <i className="fas fa-undo-alt"></i>
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -163,9 +165,9 @@ class App extends React.Component {
                   className="text-light action"
                   onClick={this.decrementBreak}
                 >
-                  <i className="fas fa-chevron-down"></i>
+                  <i className="fas fa-chevron-down fa-2x"></i>
                 </span>
-                <span id="break-length" className="mx-2">
+                <span id="break-length" className="lead mx-3">
                   {this.state.break}
                 </span>
                 <span
@@ -173,7 +175,7 @@ class App extends React.Component {
                   className="text-light action"
                   onClick={this.incrementBreak}
                 >
-                  <i className="fas fa-chevron-up"></i>
+                  <i className="fas fa-chevron-up fa-2x"></i>
                 </span>
               </div>
               <div className="col">
@@ -185,9 +187,9 @@ class App extends React.Component {
                   className="text-light action"
                   onClick={this.decrementSession}
                 >
-                  <i className="fas fa-chevron-down"></i>
+                  <i className="fas fa-chevron-down fa-2x"></i>
                 </span>
-                <span id="session-length" className="mx-2">
+                <span id="session-length" className="lead mx-3">
                   {this.state.session}
                 </span>
                 <span
@@ -195,13 +197,13 @@ class App extends React.Component {
                   className="text-light action"
                   onClick={this.incrementSession}
                 >
-                  <i className="fas fa-chevron-up"></i>
+                  <i className="fas fa-chevron-up fa-2x"></i>
                 </span>
               </div>
             </div>
             <div className="row mt-5">
               <div className="col">
-                Coded by <a href="http://www.vinweb.hu" class="text-white">Janos Vincze</a>
+                Coded by <a href="http://www.vinweb.hu" className="text-white">Janos Vincze</a>
               </div>
             </div>
           </div>
